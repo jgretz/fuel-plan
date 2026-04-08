@@ -13,7 +13,8 @@
     },
     "production": {
       "autoIncrement": true,
-      "environment": "production"
+      "environment": "production",
+      "node": "22.12.0"
     }
   },
   "submit": {

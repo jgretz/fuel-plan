@@ -5,7 +5,6 @@ node_modules/
 /app.json
 ios/
 android/
-package-lock.json
 *.jks
 *.p8
 *.p12
