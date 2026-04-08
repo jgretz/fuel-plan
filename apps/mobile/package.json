@@ -8,7 +8,8 @@
     "type-check": "tsc --noEmit --project . --skipLibCheck",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "android": "expo run:android"
+    "android": "expo run:android",
+    "deploy:ios": "npx eas-cli build --platform ios --profile production && npx eas-cli submit --platform ios --profile production"
   },
   "dependencies": {
     "@bacons/apple-targets": "^4.0.6",

@@ -16,7 +16,10 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.forcebuilders.fuelplan",
-      "appleTeamId": "B8L5W4A275"
+      "appleTeamId": "B8L5W4A275",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "plugins": [
       [
@@ -32,7 +35,23 @@
     "extra": {
       "router": {
         "root": "./src/app"
+      },
+      "eas": {
+        "build": {
+          "experimental": {
+            "ios": {
+              "appExtensions": [
+                {
+                  "bundleIdentifier": "com.forcebuilders.fuelplan.watchkitapp",
+                  "targetName": "FuelPlanWatch"
+                }
+              ]
+            }
+          }
+        },
+        "projectId": "c5e2be93-1e69-4ada-86de-afd2d288aa12"
       }
-    }
+    },
+    "owner": "joshgretz"
   }
 }
