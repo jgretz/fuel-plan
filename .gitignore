@@ -1,0 +1,14 @@
+node_modules/
+.DS_Store
+.expo/
+ios/
+android/
+package-lock.json
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+dist/

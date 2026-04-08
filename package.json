@@ -1,0 +1,26 @@
+{
+  "name": "fuel-plan",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:mobile": "npm run --prefix apps/mobile start",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "test": "vitest run",
+    "db:generate": "npm run --prefix apps/mobile db:generate",
+    "db:migrate": "npm run --prefix apps/mobile db:migrate",
+    "sim:ios": "(npm run --prefix apps/mobile ios || xcrun simctl launch 433BA28F-959C-4363-BD3E-0E2EBFBC9E82 com.forcebuilders.fuelplan)",
+    "sim:watch": "npm run build:watch && xcrun simctl boot 3AEF48EF-E175-4F2C-B89D-7EE7F37078F5 2>/dev/null; open -a Simulator --args -CurrentDeviceUDID 3AEF48EF-E175-4F2C-B89D-7EE7F37078F5 && sleep 2 && xcrun simctl install 3AEF48EF-E175-4F2C-B89D-7EE7F37078F5 \"$(find ~/Library/Developer/Xcode/DerivedData/FuelPlan-*/Build/Products/Debug-watchsimulator -name 'FuelPlanWatch.app' -maxdepth 1 | head -1)\" && xcrun simctl launch 3AEF48EF-E175-4F2C-B89D-7EE7F37078F5 com.forcebuilders.fuelplan.watchkitapp",
+    "build:watch": "xcodebuild -workspace apps/mobile/ios/FuelPlan.xcworkspace -scheme FuelPlanWatch -destination generic/platform=watchOS\\ Simulator build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.1"
+  }
+}

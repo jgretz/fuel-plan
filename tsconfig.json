@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "allowJs": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@fuel-plan/types": ["./packages/types/src/index.ts"],
+      "@fuel-plan/schedule-builder": ["./packages/schedule-builder/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
