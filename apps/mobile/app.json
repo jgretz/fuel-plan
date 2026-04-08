@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Fuel Plan",
+    "slug": "fuel-plan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "scheme": "fuel-plan",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4da6c9"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.forcebuilders.fuelplan",
+      "appleTeamId": "B8L5W4A275"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "root": "./src/app"
+        }
+      ],
+      "expo-sqlite",
+      "expo-dev-client",
+      "@bacons/apple-targets"
+    ],
+    "extra": {
+      "router": {
+        "root": "./src/app"
+      }
+    }
+  }
+}

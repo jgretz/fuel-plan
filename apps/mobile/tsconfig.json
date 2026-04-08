@@ -1,0 +1,12 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@fuel-plan/types": ["../../packages/types/src/index.ts"],
+      "@fuel-plan/schedule-builder": ["../../packages/schedule-builder/src/index.ts"]
+    }
+  },
+  "include": ["src", "index.ts"],
+  "exclude": ["node_modules", "**/*.test.ts"]
+}
