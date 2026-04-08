@@ -1,6 +1,8 @@
 node_modules/
 .DS_Store
+.claude/
 .expo/
+/app.json
 ios/
 android/
 package-lock.json
